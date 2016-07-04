@@ -14,8 +14,8 @@ namespace WebDeveloper.Model
         }
 
         [Key]
-        [StringLength(5)]
-        public string CustomerID { get; set; }
+        //[StringLength(5)]
+        public int CustomerID { get; set; }
 
         [Required(ErrorMessage = "The Company Name is required")]
         [StringLength(40)]

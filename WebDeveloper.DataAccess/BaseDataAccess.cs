@@ -19,17 +19,33 @@ namespace WebDeveloper.DataAccess
 
         public int Delete(T entity)
         {
-            throw new NotImplementedException();
+            using (var dbContext = new WebContextDB())
+            {
+
+                dbContext.Entry(entity).State = EntityState.Deleted;
+                return dbContext.SaveChanges();
+            }
         }
 
         public List<T> GetList()
         {
-            throw new NotImplementedException();
+            using (var dbContext = new WebContextDB())
+            {
+
+                return dbContext.Set<T>().ToList();
+
+
+            }
+
         }
 
         public int update(T entity)
         {
-            throw new NotImplementedException();
+            using (var dbContext = new WebContextDB())
+            {
+                dbContext.Entry(entity).State = EntityState.Modified;
+                return dbContext.SaveChanges();
+            }
         }
     }
 }

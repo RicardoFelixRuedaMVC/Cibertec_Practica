@@ -2,9 +2,9 @@
 using WebDeveloper.Model;
 namespace WebDeveloper.DataAccess
 {
-    class OrdersDATA:BaseDataAccess<Orders>
+  public class OrdersDATA:BaseDataAccess<Orders>
     {
-        public Orders GetCategories(int id)
+        public Orders GetOrders(int id)
         {
 
             using (var dbcontext = new WebContextDB())

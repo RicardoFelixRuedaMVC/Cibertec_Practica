@@ -40,7 +40,8 @@ namespace WebDeveloper.Model
         [Display(Name = "Discontinued:")]
         public bool Discontinued { get; set; }
 
-        [Display(Name = "List Categories:")]
+        //[Display(Name = "List Categories:")]
+        [ForeignKey("CategoryID")]
         public virtual Categories Categories { get; set; }
     }
 }

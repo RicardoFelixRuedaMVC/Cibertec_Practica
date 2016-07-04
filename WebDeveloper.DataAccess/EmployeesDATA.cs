@@ -5,7 +5,7 @@ namespace WebDeveloper.DataAccess
 {
     public class EmployeesDATA:BaseDataAccess<Employees>
     {
-        public Employees GetCategories(int id)
+        public Employees GetEmployees(int id)
         {
 
             using (var dbcontext = new WebContextDB())

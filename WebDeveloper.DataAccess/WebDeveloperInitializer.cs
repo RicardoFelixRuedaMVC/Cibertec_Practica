@@ -22,13 +22,13 @@ namespace WebDeveloper.DataAccess
             categories.ForEach(c => context.Categories.Add(c));
             context.SaveChanges();
 
-            var customers = new List<Customers>
-            {
-                new Customers { CompanyName="Metro", City="Lima", Country="Peru", Region="Lima", Address="San Borja", PostalCode="Lima 18", ContactName="Alfredo perez", ContactTitle="Ingeniers", Phone="973845909", Fax="2243274" }
-              };
+            //var customers = new List<Customers>
+            //{
+            //    new Customers { CompanyName="Metro", City="Lima", Country="Peru", Region="Lima", Address="San Borja", PostalCode="Lima 18", ContactName="Alfredo perez", ContactTitle="Ingeniers", Phone="973845909", Fax="2243274" }
+            //  };
 
-            customers.ForEach(c => context.Customers.Add(c));
-            context.SaveChanges();
+            //customers.ForEach(c => context.Customers.Add(c));
+            //context.SaveChanges();
 
 
        }

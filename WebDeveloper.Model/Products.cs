@@ -10,7 +10,8 @@ namespace WebDeveloper.Model
         [Key]
         public int ProductID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "The Product Name is required")]
+        [Display(Name = "Product Name:")]
         [StringLength(40)]
         public string ProductName { get; set; }
 
@@ -18,20 +19,28 @@ namespace WebDeveloper.Model
 
         public int? CategoryID { get; set; }
 
+
         [StringLength(20)]
+        [Display(Name = "Quantity Per Unit:")]
         public string QuantityPerUnit { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Unit Price:")]
         public decimal? UnitPrice { get; set; }
 
+        [Display(Name = "Units in Stock:")]
         public short? UnitsInStock { get; set; }
 
+        [Display(Name = "Units on Orders:")]
         public short? UnitsOnOrder { get; set; }
 
+        [Display(Name = "Recorder Level:")]
         public short? ReorderLevel { get; set; }
 
+        [Display(Name = "Discontinued:")]
         public bool Discontinued { get; set; }
 
+        [Display(Name = "List Categories:")]
         public virtual Categories Categories { get; set; }
     }
 }

@@ -49,12 +49,8 @@ namespace WebDeveloper.Controllers
                 return RedirectToAction("Index");
             return View(Orders);
         }
-
-
-
         public ActionResult Delete(int id)
         {
-
             var Orders = _Orders.GetOrders(id);
             if (Orders == null)
                 RedirectToAction("Index");

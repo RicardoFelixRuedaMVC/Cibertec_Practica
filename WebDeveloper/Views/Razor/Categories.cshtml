@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebDeveloper.Model.Categories>
+@using WebDeveloper.Helpers;
+@{
+    ViewBag.Title = "Categories List";
+}
+
+<h2>Categories List</h2>
+<ul>
+
+    @foreach (var item in Model)
+    {
+        <li>
+            <div>
+                <span>Name:</span>@item.CategoryName<br />
+            </div>
+                <span>Description:</span>@item.Description<br />
+                <div>
+                    @Html.DisplayPhotoExtension(item.Picture)
+                </div>
+                <div>
+                    @Html.ActionLink("Edit", "Edit", new { name= item.CategoryName, description=item.Description }) |
+                    @Html.ActionLink("Delete", "Delete", new { name = item.CategoryName, description = item.Description })
+                </div>
+</li>
+
+    }
+</ul>
+

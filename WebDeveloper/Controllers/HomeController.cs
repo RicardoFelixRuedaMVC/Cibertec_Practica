@@ -9,7 +9,5 @@ namespace WebDeveloper.Controllers
         {            
             return View();
         }
-
-       
     }
 }

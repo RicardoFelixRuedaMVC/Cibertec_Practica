@@ -10,7 +10,6 @@ namespace WebDeveloper.Controllers
 
         public ActionResult Index()
         {
-
             var Employees = new EmployeesDATA();
             return View(Employees.GetList());
         }
@@ -28,37 +27,27 @@ namespace WebDeveloper.Controllers
             }
             return View();
         }
-
-
-
         public ActionResult Edit(int id)
         {
             var Employees = _Employees.GetEmployees(id);
             if (Employees == null)
                 RedirectToAction("Index");
-
             return View(Employees);
-
         }
         [HttpPost]
         public ActionResult Edit(Employees Employees)
 
         {
-
             if (_Employees.update(Employees) > 0)
                 return RedirectToAction("Index");
             return View(Employees);
         }
-
-
-
         public ActionResult Delete(int id)
         {
 
             var Employees = _Employees.GetEmployees(id);
             if (Employees == null)
                 RedirectToAction("Index");
-
             return View(Employees);
         }
         [HttpPost]
@@ -66,7 +55,6 @@ namespace WebDeveloper.Controllers
         {
             if (_Employees.Delete(Employees) > 0)
                 return RedirectToAction("Index");
-
             return View(Employees);
         }
     }
